@@ -1,0 +1,206 @@
+@import '../../Helper-self/Varebale.scss';
+@import '../..//Helper-self//mixines.scss';
+.notfication{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .notfication-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .span-notfication{
+            margin-right: 10.5px;
+            position: relative;
+            display: block;
+            .not{
+                background-color: $notfication;
+                width: 51px;
+                height: 51px;
+                line-height: 51px;
+                text-align: center;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s;
+                .fa-bell{
+                    color: $fontnotfication;
+                }
+                .orange{
+                    display: block;
+                    position: absolute;
+                    background-color: $orange;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    top: -4px;
+                    left: 75%;
+                }
+
+                &:hover{
+                    background-color: $Renew;
+                    > .fa-bell {
+                        color: $white;
+                    }
+                }
+            }
+                .notfication-div{
+                    opacity: 0;
+                    z-index: -1000;
+                    position: absolute;
+                    background-color: $notfication;
+                    width: 320px;
+                    @include breakepoint-up(xl){
+                        left: -50%;
+                        transform: translateX(-50%);
+                    }
+                    border-radius: 10px;
+                    border: 1px solid $stroke;
+                    margin-top: 8px;
+                    .content-notfication{
+                        padding-top: 16px;
+                        padding-bottom: 104px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        width: 100%;
+                        height: 100%;
+                        h2{
+                            text-align: left;
+                            margin-bottom: 17px;
+                        }
+                        .content-notification-lests{
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            border: 1px solid rgba($orange ,0.6);
+                            border-radius: 10px;
+                            padding-left: 10px;
+                            padding-bottom: 10px;
+                            padding-top: 10px;
+                            margin-bottom: 7px;
+                            .first{
+                                margin-right: 4px;
+                                .parent-icon{
+                                    width: 32px;
+                                    height: 32px;
+                                    background-color:rgba($Renew,.6);
+                                    border-radius: 50%;
+                                    position: relative;
+                                    .chiled-icon{
+                                        position: absolute;
+                                        width: 20px;
+                                        height: 20px;
+                                        background-color: $Renew;
+                                        left: 50%;
+                                        top: 50%;
+                                        border-radius: 50%;
+                                        transform: translate(-50%,-50%);
+                                        padding: 11px;
+                                        .fa-check{
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 50%;
+                                            transform: translate(-50%,-50%);
+                                            color: #294E6E;
+
+                                        }
+                                    }
+                                }
+                            }
+                            .secound{
+                                margin-left: 4px;
+                                line-height: normal;
+                                .first-p{
+                                    color: $white;
+                                    .by{
+                                        color: rgba(255,255,255,0.6);
+                                    }
+                                }
+                                .onther-p{
+                                    color: rgba(255,255,255,0.6);
+                                    text-align: left;
+                                }
+                            }
+                            &:last-child{
+                                border : none;
+                                .first{
+                                    .parent-icon{
+                                        width: 32px;
+                                        height: 32px;
+                                        background-color:rgba(#FCBC23,.6);
+                                        border-radius: 50%;
+                                        position: relative;
+                                            .fa-envelope{
+                                                position: absolute;
+                                                left: 50%;
+                                                top: 50%;
+                                                transform: translate(-50%,-50%);
+                                                color: #FCBC23;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+        }
+        .span-notfication-last{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            margin-left: 10.5px;
+
+            img{
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                vertical-align: middle;
+                margin-right: 7px;
+            }
+            .users{
+                .user-chiled{
+                    &:first-of-type{
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $white;
+                        margin-bottom: 4px;
+                    }
+                    &:last-child{
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: rgba(255,255,255,0.6);
+                    }
+                }
+            }
+        }
+    }
+    .fade-in{
+        opacity: 1;
+        z-index: 1000;
+        animation: fade-in 0.5s forwards;
+    }
+    .fade-out{
+        opacity: 0;
+        z-index: -1000;
+        animation: fade-out 0.5s forwards;
+    }
+}
+
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

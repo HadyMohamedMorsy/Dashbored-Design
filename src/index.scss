@@ -1,0 +1,146 @@
+@import './Helper-self/Varebale.scss';
+@import './Helper-self/mixines.scss';
+// global
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+// End of *
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;  
+    padding: 0;  
+    border: 0;  
+    font-size: 100%;  
+    font: inherit;  
+    vertical-align: baseline; 
+    line-height: normal;
+}
+// body bAckground
+body{
+    background-color: $background;
+    width: 100%;
+    height: 100%;
+}
+//container
+.container{
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @include breakepoint-up(xl){
+        max-width: 82.75rem;
+    }
+
+
+}
+// row
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+    color: $white;
+    display: flex;
+    flex-wrap: wrap;
+}
+//col
+.col-4{
+    margin-bottom: 20px;
+    &:first-of-type{
+        @include breakepoint-up(xl){
+           flex: 1;
+           margin-bottom: 0;
+        }
+        flex: 0 0 100%;
+
+    }
+
+    @include breakepoint-up(xl){
+        flex: 1.54;
+        margin-bottom: 0;
+    }
+    flex: 0 0 100%;
+    &:nth-child(3n+2){
+        @include breakepoint-up(xl){
+            margin-left: 32px;
+            margin-right: 32px;
+         }
+
+    }
+
+
+
+}
+.col-8{ // dashbored viewer
+
+    @include breakepoint-up(xl){
+        @include flexbox(8);
+        padding-right: 24px
+    }
+    @include flexbox(12);
+
+
+
+}
+.col-4-grid{
+
+    @include breakepoint-up(xl){
+        @include flexbox(4);
+        padding-left: 24px
+    }
+    @include flexbox(12);
+    .p-color{
+        color: rgba(255,255,255,0.6);
+    }
+    .special{
+        margin-top: 5px;
+        font-size: 12px;
+        color: $white
+        
+    }
+
+
+}
+//col
+.col-12{
+
+    @include breakepoint-down(small){
+        @include flexbox(12);
+    }
+
+}
+.users-lg{
+
+    @include breakepoint-up(xl){
+        max-width: 100%;
+        margin-left: auto;
+    }
+}
+h3{
+    font-size: 0.875rem;
+}
+h2{
+    font-size: 16px;
+    color: $white;
+    font-weight: 500;
+}
+// End of Global
+
+.Milky{
+    span{
+        color: $icones;
+        background-color: rgba($icones,0.4);
+        padding: 5px;
+        border-radius: 2px;
+    }
+
+}
+.orange{
+    span{
+        color: $orange;
+        background-color: rgba($orange,0.4);
+        padding: 5px 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 2px;
+    }
+}

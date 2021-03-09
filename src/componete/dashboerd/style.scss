@@ -1,0 +1,674 @@
+@import '../../Helper-self/mixines.scss';
+@import '../../Helper-self/Varebale.scss';
+
+.shape{
+    background-color: $child-background;
+    width: 100%;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 10px;
+    h3{
+        padding-bottom: 16px;
+    }
+
+
+}
+.First-local{
+    position: relative;
+    .eye{
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        background-color: rgba(30, 193, 195, 0.4);
+        border-radius: 50%;
+        top: 107px;
+        right: 50px;
+        .fa-eye-slash{
+            position: absolute;
+            font-size: 14px;
+            color: $Dowanload;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+
+    }
+}
+
+.same{
+    width: 100%;
+    padding-top: 94px;
+    padding-left: 10px;
+    padding-bottom: 17px;
+    padding-right: 10px;
+    background-color: $child-background;
+    margin-bottom: 31px;
+    border-radius: 10px;
+    transition: all .4s;
+
+    .Text-content{
+        margin-bottom: 28px;
+        .p-color{
+            color: rgba(255,255,255,.6);
+        }
+        .serial{
+            font-size: 22px;
+        }
+    }
+    
+
+
+}
+.table{
+    padding-top: 21px;
+    transition: all 0.4s;
+}
+
+.row-first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include breakepoint-up(xl){
+        flex-wrap: nowrap;
+    }
+    .lock{
+        background-color: #36395D;
+        padding: 16px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s;
+        border-radius: 3px;
+        @include breakepoint-up(xl){
+            @include  flexbox(2.5);
+            margin-bottom: 0px;
+        }
+
+            @include  flexbox(12);
+            margin-bottom: 15px;
+        &:hover{
+            background-color: $Renew;
+            > .lock-span{
+                color: $white;
+            }
+        }
+        .lock-span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        &:nth-child(3n+2){
+            @include breakepoint-up(xl){
+                margin-left: 24px;
+                margin-right: 24px;
+           }
+       }
+    }
+    .lock-secound {
+        transition: all 0.3s;
+        @include breakepoint-up(xl){
+            @include  flexbox(6);
+            margin-bottom: 0px;
+        }
+        @include  flexbox(12);
+        &:last-of-type{
+            @include breakepoint-up(xl){
+                text-align: right;
+            }
+            .parent-icon{
+                width: 32px;
+                height: 32px;
+                background-color:rgba($icones , 0.3);
+                border-radius: 50%;
+                position: relative;
+                padding: 15px;
+                @include breakepoint-up(xl){
+                    margin-left: auto;
+                }
+
+                .fa-cart-plus{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color:$icones;
+                    font-size: 18px;
+                }
+            }
+        }
+        .num-one{
+            color: $icones;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .num-two{
+            color: rgba(255,255,255,.6);
+            font-size: 14px;
+        }
+    }
+
+    .lock-thired {
+        transition: all 0.3s;
+        @include breakepoint-up(xl){
+            @include  flexbox(6);
+            margin-bottom: 0px;
+        }
+        @include  flexbox(12);
+        &:last-of-type{
+            @include breakepoint-up(xl){
+                text-align: right;
+            }
+            .parent-icon{
+                width: 32px;
+                height: 32px;
+                background-color:rgba($orange , 0.3);
+                border-radius: 50%;
+                position: relative;
+                padding: 15px;
+                @include breakepoint-up(xl){
+                    margin-left: auto;
+                }
+
+                .fa-cart-arrow-down{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color:$orange;
+                    font-size: 18px;
+                }
+            }
+        }
+        .num-one{
+            color: $orange;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .num-two{
+            color: rgba(255,255,255,.6);
+            font-size: 14px;
+        }
+
+    }
+    .lock-thired-button{
+         @include breakepoint-up(xl){
+            @include  flexbox(8);
+
+         }
+         @include  flexbox(12);
+         &:last-child{
+            @include breakepoint-up(xl){
+                @include  flexbox(4);
+    
+             }
+             @include  flexbox(12);
+         }
+         .button{
+             background-color: $Renew ;
+             cursor: pointer;
+             @include breakepoint-up(xl){
+                width: 80%;
+    
+             }
+             width: 100%;
+             padding: 20px;
+             position: relative;
+             border-radius: 5px;
+             .last-button{
+                 right: 20px;
+                 position: absolute;
+                 transform: translateY(-50%);
+                 top: 50%;
+                 font-weight: bold;
+             }
+             .first-button{
+                 left: 20px;
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+
+         }
+         .last-button-only{
+            background-color: #323662 ;
+            width: 100%;
+            padding: 11px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            span{
+                color: $red;
+            }
+         }
+    }
+    .Unbind{
+        @include breakepoint-up(xl){
+            @include  flexbox(8);
+            margin-bottom: 0px;
+         }
+         @include  flexbox(12);
+         margin-bottom: 15px;
+         &:last-of-type{
+            @include breakepoint-up(xl){
+                @include  flexbox(4);
+            }
+            @include  flexbox(12);
+            .butt{
+                background-color: #323662 ;
+                width: 100%;
+                padding: 11px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                cursor: pointer;
+
+                .last-button-only{
+                    background: transparent;
+                    border: none;
+                    color: $red;
+                    cursor: pointer;
+                    outline: none;
+                }
+                .onther-last{
+                    background: transparent;
+                    border: none;
+                    color: $Dowanload;
+                    cursor: pointer;
+                    outline: none;
+
+                    span{
+                        margin-right: 4px
+                    }
+                }
+             }
+         }
+         @include  flexbox(12);
+            div{
+                margin-top: 20px;
+                font-size: 18px;
+                div{
+                    font-size: 12px;
+                    color: rgba(255,255,255,.6);
+                }
+            } 
+            .last-button-only{
+                width: 100%;
+            }
+        
+    }
+    .Dowanload{
+        @include breakepoint-up(xl){
+            @include  flexbox(4.5);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @include  flexbox(12);
+        &:last-of-type{
+            @include breakepoint-up(xl){
+                @include  flexbox(7.5);
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            @include  flexbox(12);
+        }
+        .desktop-borde{
+            @include breakepoint-up(xl){
+                width: 124px;
+            }
+            width: 100%;
+            height: 124px;
+            border: 1px solid rgba($white,0.2);
+            position: relative;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            .text-content{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                .fa-desktop{
+                    font-size: 20px;
+                    color: rgba($white,.5);
+                }
+            }
+        }
+        .button{
+            background-color:#19A2A4;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            .system{
+                text-align: center;
+                .fa-windows{
+                    margin-right: 5px;
+                }
+                .fa-apple{
+                    margin-right: 5px;
+                }
+            }
+        }
+
+    }
+}
+.nosame{
+    padding: 30px 20px;
+    background-color: $child-background;
+    margin-bottom: 31px;
+    border-radius: 10px;
+    width: 100%;
+    transition: all .4s;
+    .fa-discord{
+        margin-right: 5px;
+        color: $Renew;
+    }
+    span{
+        font-size: 14px;
+    }
+}
+.different{
+    padding-top: 30px;
+    padding-bottom: 23px;
+    padding-left: 26px;
+    padding-right: 26px;
+    background-color: $child-background;
+    border-radius: 10px;
+    width: 100%;
+    transition: all .4s;
+}
+table{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+
+        .t-head{
+            display: flex;
+            width: 100%;
+            background-color: $child-background;
+            justify-content: space-between;
+            @include breakepoint-up(lg){
+            }
+            padding : 15px;
+
+            border-radius: 5px;
+            th{
+                width: 100%;
+                &:first-of-type{
+                    text-align: left;
+                    position: relative;
+                    .fa-chevron-up{
+                        position: absolute;
+                        top: 0px;
+                        left: 43px;
+                        font-size: 8px;
+                        cursor: pointer;
+                    }
+                    .fa-chevron-down{
+                        position: absolute;
+                        top: 13px;
+                        left: 43px;
+                        font-size: 8px;
+                        cursor: pointer;
+                    }
+                }
+                &:nth-child(2){
+                    text-align: left;
+                }
+            }
+        }
+        tbody{
+            .t-body{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                @include breakepoint-up(xl){
+                    font-size: 14px;
+                }
+              margin-left: auto;
+              margin-right: auto;
+
+                td{
+                    display: inline-block;
+                    padding-top: 40px;
+                    padding-bottom: 10px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border-bottom: 1px solid rgba($white,.3);
+                    &:first-of-type{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+}
+
+// pop 
+
+.pop-one{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1000;
+    .button-pop{
+        @include breakepoint-up(xl){
+            width: 521px;
+        }
+        width: 400px;
+        height: 239px;
+        background-color: $child-background;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        opacity: 1;
+        z-index: 1000;
+        .content{
+            background-color: #2D325A;
+            padding-top: 26px;
+            padding-left: 26px;
+            padding-right: 26px;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            h2{
+                font-size: 24px;
+                font-weight: 500;
+                padding-bottom: 27px;
+            }
+            .text-content{
+                label{
+                    color: $white;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+                .input{
+                    display: block;
+                    width: 100%;
+                    padding: 14.7px;
+                    outline: none;
+                    background-color: #252A4B;
+                    border: none;
+                    color: $white;
+                }
+            }
+        }
+        .text-content-input{
+            text-align: right;
+            padding-left: 26px;
+            padding-right: 26px;
+            button{
+                display: inline-block;
+                outline: none;
+                border: none;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 40px;
+                padding-right: 40px;
+                cursor: pointer;
+                color: $white;
+                &:first-of-type{
+                    margin-right: 4px;
+                }
+            }
+            .cancel{
+                background-color: #252A4B;
+            }
+            .send{
+                background-color: $Dowanload;
+            }
+        }
+        
+    }
+    .configration-email{
+        width: 424px;
+        background-color: $notfication;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        border-radius: 10px;
+        opacity: 0;
+        z-index: -1000;
+        .icon-message{
+            background-color: rgba(#63F4F7,0.4);
+            width:64px;
+            height: 64px;
+            border-radius: 50%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 23px;
+            .fa-envelope-open-text{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 30px;
+                color: #63F4F7;
+            }
+        }
+        .text-content{
+            text-align: center;
+            width: 100%;
+            .header-text{
+                margin-bottom: 11px;
+                h2{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+            .confirm{
+                font-size: 14px;
+                color:$white;
+                margin-bottom: 40px;
+                p{
+                    span{
+                        color: $Renew;
+                    }
+                }
+            }
+            .last-confirm{
+                font-size: 14px;
+                color:$white;
+                p{
+                    &:first-of-type{
+                        color: rgba($white,0.5);
+                        margin-bottom: 10px;
+                    }
+                    span{
+                        color: $Renew;
+                    }
+                }
+            }
+
+        }
+        .icon-close{
+            position: absolute;
+            top: 4%;
+            left: 91%;
+            transform: translate(-91%,-4%);
+            cursor: pointer;
+            .fa-times{
+                color: rgba($white,0.4);
+            }
+        }
+    }
+    
+
+}
+.fade-in-pop{
+    opacity: 1;
+    animation: fade-in-pop 0.4s ease-in-out;
+    z-index: 1000;
+}
+.fade-in-button-pop{
+    opacity: 1 !important;
+    animation: fade-in-pop 0.4s ease-in-out;
+    z-index: 1000 !important;
+}
+.fade-out-pop{
+    opacity: 0;
+    animation: fade-out-pop 0.4s ease-out;
+    z-index: -1000;
+}
+.fade-out-button-pop{
+    opacity: 0 !important;
+    animation: fade-out-pop 0.4s ease-out;
+    z-index: -1000 !important;
+}
+
+@keyframes fade-in-pop {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fade-out-pop {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in-button-pop {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out-button-pop {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
