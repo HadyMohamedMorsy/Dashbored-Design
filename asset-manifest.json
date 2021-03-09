@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Dashbored-Design/static/css/main.dcb5bd0d.chunk.css",
+    "main.js": "/Dashbored-Design/static/js/main.788674d6.chunk.js",
+    "main.js.map": "/Dashbored-Design/static/js/main.788674d6.chunk.js.map",
+    "runtime-main.js": "/Dashbored-Design/static/js/runtime-main.91e337e9.js",
+    "runtime-main.js.map": "/Dashbored-Design/static/js/runtime-main.91e337e9.js.map",
+    "static/js/2.766e87b0.chunk.js": "/Dashbored-Design/static/js/2.766e87b0.chunk.js",
+    "static/js/2.766e87b0.chunk.js.map": "/Dashbored-Design/static/js/2.766e87b0.chunk.js.map",
+    "index.html": "/Dashbored-Design/index.html",
+    "static/css/main.dcb5bd0d.chunk.css.map": "/Dashbored-Design/static/css/main.dcb5bd0d.chunk.css.map",
+    "static/js/2.766e87b0.chunk.js.LICENSE.txt": "/Dashbored-Design/static/js/2.766e87b0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91e337e9.js",
+    "static/js/2.766e87b0.chunk.js",
+    "static/css/main.dcb5bd0d.chunk.css",
+    "static/js/main.788674d6.chunk.js"
+  ]
+}
